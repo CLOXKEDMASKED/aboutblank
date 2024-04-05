@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Website in about:blank</title>
+</head>
+<body>
+<button id="openButton">Open Website in about:blank</button>
+
+<script>
+document.getElementById('openButton').addEventListener('click', function() {
+  var newWindow = window.open('about:blank', '_blank');
+  if (newWindow) {
+    newWindow.location.href = 'https://example.com'; // Replace 'https://example.com' with the desired URL
+  } else {
+    alert('Pop-up blocked! Please allow pop-ups for this website.');
+  }
+});
+</script>
+</body>
+</html>
